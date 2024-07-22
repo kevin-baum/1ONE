@@ -74,7 +74,7 @@ contract ONE is ERC20, Ownable {
         pair = _pair;
 
         _setAutomatedMarketMakerPair(_pair, true);
-        dividendTracker.updateLP_Token(pair);
+        dividendTracker.updateLP_Token(_pair);
 
         dividendTracker.excludeFromDividends(address(dividendTracker), true);
         dividendTracker.excludeFromDividends(address(this), true);
